@@ -1,29 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kacper Rusin's portfolio</title>
+    <title>Kacper Rusin</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@500&family=Inter:wght@500&family=Playpen+Sans:wght@500&family=Poppins:wght@300&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-    <div class="body">
+    <div class="main">
         <nav>
             <div class="logo">Kacper</div>
             <ul>
-                <li><a href="">ABOUT</a></li>
-                <li><a href="">SERVICES</a></li>
-                <li><a href="">PROJECTS</a></li> 
-                <li><a href="mailto:rusin.kacper.2006@gmail.com">CONTACT</a></li>
+                <li><a href="">O MNIE</a></li>
+                <li><a href="">PROJEKTY</a></li>
+                <li><a href="mailto:rusin.kacper.2006@gmail.com">KONTAKT</a></li>
             </ul>
         </nav>
-        <div class="about">
-            <h1> I'm <span>Kacper</span></h1>
-            <p>This is official portfolio website.
-                <br> Here you can contact me.
+        <div class="about animacja-wjazd1 ">
+            <h1> Jestem <span>Kacper</span></h1>
+            <p>Oficjalna strona portfolio opisująca moją działalność
+                <br> Tutaj możesz poznać jej szczegóły...
             </p>
-            <a href="#">CV</a>
+            <a href="https://drive.google.com/file/d/1_HOnDM_nyNAudRQH6gNoT4VvBF9utwvE/view?usp=sharing">Pobierz CV</a>
         </div>
+
     </div>
+    <div class="main2">
+        <div class="projekty">
+            <h1><center>PROJEKTY</center></h1><br>
+            <div class="projekt1">
+                <div class="content animacja-wjazd">
+                    <div class="tekst">
+                        <a href="https://ktsgliwice.pl">
+                            <h2>ktsgliwice.pl</h2>
+                        </a>
+                        <p>Współtworzenie i administracja stroną do dziś
+                            <br>Rozpoczęcie projektu 01.2022
+                        </p>
+                    </div>
+                    <div class="zdjecia">
+                        <img src="kts.png" alt="" class="ikona">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="projekt1">
+                <div class="content animacja-wjazd">
+                    <div class="tekst">
+                        <a href="https://wymianapolniem.vercel.app">
+                            <h2>wymianapolniem.vercel.app</h2>
+                        </a>
+                        <p>Stworzenie strony w ramach projektu wymiany polsko-niemieckiej
+                            <br>Rozpoczęcie projektu 05.2023
+                        </p>
+                    </div>
+                    <div class="zdjecia">
+                        <img src="wymiana.png" alt="" class="ikona">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="projekt1">
+                <div class="content animacja-wjazd">
+                    <div class="tekst">
+                        <a href="https://rusin.vercel.app">
+                            <h2>rusin.vercel.app</h2>
+                        </a>
+                        <p>Stworzenie strony w ramach lekcji
+                            <br>Rozpoczęcie projektu 09.2023
+                        </p>
+                    </div>
+                    <div class="zdjecia ">
+                        <img src="malarze.png" alt="" class="ikona">
+                    </div>
+                </div>
+            </div>
+            <div class="sociale animacja-wjazd">
+                <a href="https://github.com/0273574"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/po_prostu_kacperekk/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="mailto:rusin.kacper.2006@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+
+        
+    </div>
+    <script src="https://kit.fontawesome.com/ab47c56c0a.js" crossorigin="anonymous"></script>
+    <script>
+        const projekty = document.querySelectorAll('.animacja-wjazd');
+
+function sprawdzScroll() {
+    projekty.forEach((projekt) => {
+        const rect = projekt.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.8) {
+            projekt.classList.add('animacja-widoczna');
+        }
+    });
+}
+
+window.addEventListener('scroll', sprawdzScroll);
+
+    </script>
+
+
 </body>
+
 </html>
