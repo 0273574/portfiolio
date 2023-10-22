@@ -18,8 +18,8 @@
         <nav>
             <div class="logo">Kacper</div>
             <ul>
-                <li><a href="">O MNIE</a></li>
-                <li><a href="">PROJEKTY</a></li>
+                <li><a href="#">O MNIE</a></li>
+                <li><a href="#projekty">PROJEKTY</a></li>
                 <li><a href="mailto:rusin.kacper.2006@gmail.com">KONTAKT</a></li>
             </ul>
         </nav>
@@ -28,17 +28,19 @@
             <p>Oficjalna strona portfolio opisująca moją działalność
                 <br> Tutaj możesz poznać jej szczegóły...
             </p>
-            <a href="https://drive.google.com/file/d/1_HOnDM_nyNAudRQH6gNoT4VvBF9utwvE/view?usp=sharing">Pobierz CV</a>
+            <a href="https://drive.google.com/file/d/1_HOnDM_nyNAudRQH6gNoT4VvBF9utwvE/view?usp=sharing" target="_blank">Pobierz CV</a>
         </div>
 
     </div>
     <div class="main2">
-        <div class="projekty">
-            <h1><center>PROJEKTY</center></h1><br>
+        <div class="projekty" id="projekty">
+            <h1>
+                <center>PROJEKTY</center>
+            </h1><br>
             <div class="projekt1">
                 <div class="content animacja-wjazd">
                     <div class="tekst">
-                        <a href="https://ktsgliwice.pl">
+                        <a href="https://ktsgliwice.pl" target="_blank">
                             <h2>ktsgliwice.pl</h2>
                         </a>
                         <p>Współtworzenie i administracja stroną do dziś
@@ -50,11 +52,11 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="projekt1">
                 <div class="content animacja-wjazd">
                     <div class="tekst">
-                        <a href="https://wymianapolniem.vercel.app">
+                        <a href="https://wymianapolniem.vercel.app" target="_blank">
                             <h2>wymianapolniem.vercel.app</h2>
                         </a>
                         <p>Stworzenie strony w ramach projektu wymiany polsko-niemieckiej
@@ -66,11 +68,11 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="projekt1">
                 <div class="content animacja-wjazd">
                     <div class="tekst">
-                        <a href="https://rusin.vercel.app">
+                        <a href="https://rusin.vercel.app" target="_blank">
                             <h2>rusin.vercel.app</h2>
                         </a>
                         <p>Stworzenie strony w ramach lekcji
@@ -83,28 +85,29 @@
                 </div>
             </div>
             <div class="sociale animacja-wjazd">
-                <a href="https://github.com/0273574"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.instagram.com/po_prostu_kacperekk/"><i class="fa-brands fa-instagram"></i></a>
-                <a href="mailto:rusin.kacper.2006@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://github.com/0273574" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/po_prostu_kacperekk/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="mailto:rusin.kacper.2006@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
             </div>
         </div>
 
-        
+
     </div>
+    <footer>Made with ♥ by <a href="https://ayo.so/iletymaszlat">K. Rusin</a></footer>
     <script src="https://kit.fontawesome.com/ab47c56c0a.js" crossorigin="anonymous"></script>
     <script>
         const projekty = document.querySelectorAll('.animacja-wjazd');
 
-function sprawdzScroll() {
-    projekty.forEach((projekt) => {
-        const rect = projekt.getBoundingClientRect();
-        if (rect.top < window.innerHeight * 0.8) {
-            projekt.classList.add('animacja-widoczna');
+        function sprawdzScroll() {
+            projekty.forEach((projekt) => {
+                const rect = projekt.getBoundingClientRect();
+                if (rect.top < window.innerHeight * 0.8) {
+                    projekt.classList.add('animacja-widoczna');
+                }
+            });
         }
-    });
-}
 
-window.addEventListener('scroll', sprawdzScroll);
+        window.addEventListener('scroll', sprawdzScroll);
 
     </script>
 
